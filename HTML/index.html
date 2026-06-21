@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SentimentAI | Powered by BERT</title>
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet"
+        href="../CSS/style.css">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon"
+        href="../assets/icons/favicon.png">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Navigation Bar -->
+    <!-- ========================= -->
+
+    <header class="navbar">
+
+        <div class="logo-container">
+
+            <img src="../assets/logo.png"
+                alt="SentimentAI Logo"
+                class="logo-image">
+
+            <div class="logo-text">
+
+                <h2>
+                    SentimentAI
+                </h2>
+
+                <p>
+                    Powered by BERT
+                </p>
+
+            </div>
+
+        </div>
+
+        <nav class="nav-menu">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html"
+                        class="nav-link active-link">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="history.html"
+                        class="nav-link">
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html"
+                        class="nav-link">
+                        Analytics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html"
+                        class="nav-link">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========================= -->
+    <!-- Hero Section -->
+    <!-- ========================= -->
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+
+                AI-Powered Sentiment Analysis
+
+            </span>
+
+            <h1 class="hero-title">
+
+                Analyze Text Sentiment
+
+                <br>
+
+                with
+
+                <span class="highlight-text">
+
+                    BERT AI
+
+                </span>
+
+            </h1>
+
+            <p class="hero-subtitle">
+
+                Detect Positive, Negative, and Neutral
+                sentiments using a fine-tuned BERT
+                Transformer model.
+
+            </p>
+
+
+            <!-- ========================= -->
+            <!-- Feature Cards -->
+            <!-- ========================= -->
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                    </div>
+
+                    <h3 class="feature-title">
+
+                        Real-time Prediction
+
+                    </h3>
+
+                    <p class="feature-description">
+
+                        Get instant sentiment
+                        analysis results.
+
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </div>
+
+                    <h3 class="feature-title">
+
+                        BERT-Powered Accuracy
+
+                    </h3>
+
+                    <p class="feature-description">
+
+                        Advanced transformer model
+                        for highly accurate predictions.
+
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <h3 class="feature-title">
+
+                        Explainable AI
+
+                    </h3>
+
+                    <p class="feature-description">
+
+                        Understand why the model
+                        predicted the sentiment.
+
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                    </div>
+
+                    <h3 class="feature-title">
+
+                        Analytics & History
+
+                    </h3>
+
+                    <p class="feature-description">
+
+                        Track and visualize
+                        previous analyses.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Hero Image -->
+
+        <div class="hero-image-container">
+
+            <img src="../assets/hero-ai.png"
+                alt="AI Robot"
+                class="hero-image">
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Input Section -->
+    <!-- ========================= -->
+
+    <section class="input-section">
+
+        <div class="input-container">
+
+            <h2 class="input-title">
+
+                Analyze Your Text
+
+            </h2>
+
+            <p class="input-subtitle">
+
+                Enter any sentence to predict
+                its sentiment.
+
+            </p>
+
+            <textarea
+
+                id="sentiment-input"
+
+                placeholder="Example: This movie was absolutely amazing and inspiring.">
+
+            </textarea>
+
+
+            <div class="character-counter"
+                id="character-counter">
+
+                0 / 1000
+
+            </div>
+
+
+            <!-- Try Examples -->
+
+            <div class="example-buttons">
+
+                <button
+                    class="example-btn"
+                    onclick="loadPositiveExample()">
+
+                    😊 Positive Example
+
+                </button>
+
+                <button
+                    class="example-btn"
+                    onclick="loadNegativeExample()">
+
+                    😠 Negative Example
+
+                </button>
+
+                <button
+                    class="example-btn"
+                    onclick="loadNeutralExample()">
+
+                    😐 Neutral Example
+
+                </button>
+
+            </div>
+
+
+            <!-- Analyze Button -->
+
+            <div class="button-container">
+
+                <button
+                    class="analyze-btn"
+                    onclick="analyzeSentiment()">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Analyze Sentiment
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Result Section -->
+    <!-- ========================= -->
+
+    <section class="result-section">
+
+        <div class="result-card">
+
+            <h2 class="result-title">
+
+                Prediction Result
+
+            </h2>
+
+
+            <div class="sentiment-result">
+
+                <!-- <span class="sentiment-icon">
+
+                    😊
+
+                </span> -->
+
+                <span
+
+                    class="sentiment-label"
+
+                    id="sentiment-label">
+
+                    Waiting...
+
+                </span>
+
+            </div>
+
+
+            <div class="confidence-container">
+
+                <p class="confidence-title">
+
+                    Confidence Score
+
+                </p>
+
+                <h2
+
+                    class="confidence-value"
+
+                    id="confidence-value">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+
+            <!-- Positive -->
+
+            <div class="probability-group">
+
+                <div class="progress-info">
+
+                    <span>Positive</span>
+
+                    <span id="positive-score">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+
+                        class="progress-fill"
+
+                        id="positive-fill">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Negative -->
+
+            <div class="probability-group">
+
+                <div class="progress-info">
+
+                    <span>Negative</span>
+
+                    <span id="negative-score">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+
+                        class="progress-fill"
+
+                        id="negative-fill">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Neutral -->
+
+            <div class="probability-group">
+
+                <div class="progress-info">
+
+                    <span>Neutral</span>
+
+                    <span id="neutral-score">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div
+
+                        class="progress-fill"
+
+                        id="neutral-fill">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI Explanation -->
+
+            <div class="explanation-box">
+
+                <h3>
+
+                    AI Explanation
+
+                </h3>
+
+                <p id="explanation-text">
+
+                    Waiting for prediction...
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>

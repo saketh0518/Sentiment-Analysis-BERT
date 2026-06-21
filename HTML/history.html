@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>History | SentimentAI</title>
+
+    <link rel="stylesheet" href="../CSS/history.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="icon" href="../assets/icons/favicon.png">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Navigation Bar -->
+    <!-- ========================= -->
+
+    <header class="navbar">
+
+        <div class="logo-container">
+
+            <img src="../assets/logo.png"
+                class="logo-image"
+                alt="Logo">
+
+            <div class="logo-text">
+                <h2>SentimentAI</h2>
+                <p>Powered by BERT</p>
+            </div>
+
+        </div>
+
+        <nav class="nav-menu">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="history.html"
+                        class="active-link">
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- <button id="theme-button">
+            <i class="fa-solid fa-moon"></i>
+        </button> -->
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- History Section -->
+    <!-- ========================= -->
+
+    <section class="history-container">
+
+        <div class="history-header">
+
+            <h1 class="history-title">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Analysis History
+
+            </h1>
+
+            <p class="history-subtitle">
+
+                View and manage your previous sentiment analyses.
+
+            </p>
+
+        </div>
+
+        <!-- Search & Filters -->
+
+        <div class="history-controls">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search text...">
+
+            </div>
+
+            <select id="sentiment-filter">
+
+                <option>All Sentiments</option>
+
+                <option>Positive</option>
+
+                <option>Negative</option>
+
+                <option>Neutral</option>
+
+            </select>
+
+            <button id="export-csv-button">
+
+                <i class="fa-solid fa-file-csv"></i>
+
+                Export CSV
+
+            </button>
+
+            <button id="clear-history-button">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Clear All
+
+            </button>
+
+        </div>
+
+        <!-- History Table -->
+
+        <div class="history-table-container">
+
+            <table class="history-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+
+                        <th>Text</th>
+
+                        <th>Sentiment</th>
+
+                        <th>Confidence</th>
+
+                        <th>Date & Time</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="history-table-body">
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>
+                            This movie was absolutely amazing...
+                        </td>
+
+                        <td>
+
+                            <span class="positive-tag">
+
+                                Positive
+
+                            </span>
+
+                        </td>
+
+                        <td>98.7%</td>
+
+                        <td>
+                            Jun 08, 2026
+                            07:30 PM
+                        </td>
+
+                        <td>
+
+                            <button class="delete-button">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>
+                            The service was terrible...
+                        </td>
+
+                        <td>
+
+                            <span class="negative-tag">
+
+                                Negative
+
+                            </span>
+
+                        </td>
+
+                        <td>95.2%</td>
+
+                        <td>
+                            Jun 08, 2026
+                            07:35 PM
+                        </td>
+
+                        <td>
+
+                            <button class="delete-button">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>
+                            It was an average experience...
+                        </td>
+
+                        <td>
+
+                            <span class="neutral-tag">
+
+                                Neutral
+
+                            </span>
+
+                        </td>
+
+                        <td>60.1%</td>
+
+                        <td>
+                            Jun 08, 2026
+                            07:40 PM
+                        </td>
+
+                        <td>
+
+                            <button class="delete-button">
+
+                                <i class="fa-solid fa-trash"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+<script src="../JS/history.js"></script>
+</body>
+
+</html>
+

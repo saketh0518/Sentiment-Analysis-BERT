@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | SentimentAI</title>
+
+    <link rel="stylesheet" href="../CSS/analytics.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="icon" href="../assets/icons/favicon.png">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Navigation Bar -->
+    <!-- ========================= -->
+
+    <header class="navbar">
+
+        <div class="logo-container">
+
+            <img src="../assets/logo.png"
+                alt="Logo"
+                class="logo-image">
+
+            <div class="logo-text">
+                <h2>SentimentAI</h2>
+                <p>Powered by BERT</p>
+            </div>
+
+        </div>
+
+        <nav class="nav-menu">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="history.html">
+                        History
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html"
+                        class="active-link">
+                        Analytics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- <button id="theme-button">
+            <i class="fa-solid fa-moon"></i>
+        </button> -->
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- Analytics Header -->
+    <!-- ========================= -->
+
+    <section class="analytics-container">
+
+        <div class="analytics-header">
+
+            <h1>
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                Analytics Dashboard
+
+            </h1>
+
+            <p>
+
+                Visualize your sentiment prediction history.
+
+            </p>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Statistics Cards -->
+        <!-- ========================= -->
+
+        <div class="stats-grid">
+
+            <div class="stats-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>Total Analyses</h3>
+
+                <h2 id="total-analysis">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="stats-card">
+
+                <i class="fa-solid fa-face-smile"></i>
+
+                <h3>Positive</h3>
+
+                <h2 id="positive-count">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="stats-card">
+
+                <i class="fa-solid fa-face-frown"></i>
+
+                <h3>Negative</h3>
+
+                <h2 id="negative-count">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="stats-card">
+
+                <i class="fa-solid fa-face-meh"></i>
+
+                <h3>Neutral</h3>
+
+                <h2 id="neutral-count">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Charts Section -->
+        <!-- ========================= -->
+
+        <div class="charts-grid">
+
+            <div class="chart-card">
+
+                <h2>
+
+                    Sentiment Distribution
+
+                </h2>
+
+                <canvas id="pie-chart">
+
+                </canvas>
+
+            </div>
+
+            <div class="chart-card">
+
+                <h2>
+
+                    Sentiment Comparison
+
+                </h2>
+
+                <canvas id="bar-chart">
+
+                </canvas>
+
+            </div>
+
+        </div>
+
+        
+        <!-- ========================= -->
+        <!-- Most Frequent Words -->
+        <!-- ========================= -->
+
+        <div class="word-frequency-card">
+
+            <h2>
+
+                <i class="fa-solid fa-tags"></i>
+
+                Most Frequent Words
+
+            </h2>
+
+            <div class="word-container">
+
+                <span class="word-tag">
+                    amazing
+                </span>
+
+                <span class="word-tag">
+                    great
+                </span>
+
+                <span class="word-tag">
+                    excellent
+                </span>
+
+                <span class="word-tag">
+                    bad
+                </span>
+
+                <span class="word-tag">
+                    terrible
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Recent Activity -->
+        <!-- ========================= -->
+
+        <div class="recent-activity-card">
+
+            <h2>
+
+                <i class="fa-solid fa-clock"></i>
+
+                Recent Activity
+
+            </h2>
+
+            <ul id="recent-activity-list">
+
+                <li>
+                    Positive prediction added.
+                </li>
+
+                <li>
+                    Negative prediction added.
+                </li>
+
+                <li>
+                    Neutral prediction added.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="../JS/analytics.js"></script>
+
+</body>
+
+</html>
+

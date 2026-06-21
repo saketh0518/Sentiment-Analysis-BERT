@@ -1,0 +1,349 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap'); */
+/* Using Times New Roman */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root{
+
+    --background-color:#081225;
+    --navbar-color:#07101F;
+    --card-color:#0F1B34;
+
+    --primary-blue:#2563EB;
+    --hover-blue:#3B82F6;
+
+    --primary-text:#F8FAFC;
+    --secondary-text:#94A3B8;
+
+    --border-color:rgba(255,255,255,0.08);
+
+}
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    /* font-family:'Poppins',sans-serif; */
+    /* font-family:"Times New Roman", Times, serif; */
+    font-family:'Inter', sans-serif;
+
+    background:var(--background-color);
+
+    color:var(--primary-text);
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    height:85px;
+
+    background:var(--navbar-color);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 60px;
+
+    border-bottom:1px solid var(--border-color);
+
+}
+
+.logo-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo-image{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+.logo-text h2{
+
+    font-size:24px;
+
+}
+
+.logo-text p{
+
+    font-size:13px;
+
+    color:var(--secondary-text);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    color:var(--secondary-text);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover,
+.active-link{
+
+    color:var(--primary-blue);
+
+}
+
+#theme-button{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:var(--card-color);
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+
+/* ==========================================
+   ABOUT CONTAINER
+========================================== */
+
+.about-container{
+
+    padding:50px 60px;
+
+}
+
+.about-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.about-header h1{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.about-header p{
+
+    color:var(--secondary-text);
+
+    font-size:17px;
+
+}
+
+
+/* ==========================================
+   ABOUT CARDS
+========================================== */
+
+.about-card{
+
+    background:var(--card-color);
+
+    border:1px solid var(--border-color);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    transition:.3s;
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:var(--primary-blue);
+
+}
+
+.about-card h2{
+
+    margin-bottom:18px;
+
+    color:var(--primary-blue);
+
+}
+
+.about-card p{
+
+    color:var(--secondary-text);
+
+    line-height:1.8;
+
+}
+
+.about-card ul{
+
+    padding-left:20px;
+
+}
+
+.about-card ul li{
+
+    margin-bottom:12px;
+
+    color:var(--secondary-text);
+
+}
+
+
+/* ==========================================
+   TECHNOLOGY GRID
+========================================== */
+
+.technology-grid{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.technology-grid span{
+
+    background:#09172D;
+
+    border:1px solid var(--border-color);
+
+    padding:12px 18px;
+
+    border-radius:25px;
+
+    transition:.3s;
+
+}
+
+.technology-grid span:hover{
+
+    border-color:var(--primary-blue);
+
+    color:var(--primary-blue);
+
+}
+
+
+/* ==========================================
+   DEVELOPER CARD
+========================================== */
+
+.developer-card{
+
+    text-align:center;
+
+}
+
+.developer-card p{
+
+    margin-top:10px;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    .about-container{
+
+        padding:20px;
+
+    }
+
+    .about-header h1{
+
+        font-size:32px;
+
+    }
+
+}
